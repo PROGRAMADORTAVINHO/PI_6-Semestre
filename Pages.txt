@@ -1,0 +1,14 @@
+Header - Apple
+
+Agradecimentos
+- Autonics - Explição sobre a empresa
+- Senac
+
+Sobre o projeto (About the project) / Sobre nós (About us)
+- Carrossel - Com foto e uma descrição das pessoas do grupo
+- Explicação sobre o projeto
+- Construção - Foto fiap
+- Sensores - Hover - Netflix
+
+Resultados (Results)
+- Gráficos
