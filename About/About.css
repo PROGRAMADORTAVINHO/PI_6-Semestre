@@ -16,7 +16,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #F2F2F2;
     padding: 20px;
 }
 
@@ -51,7 +50,6 @@
 }
 
 .card-content {
-    background-color: white;
     color: black;
     padding: 20px;
     position: absolute;
