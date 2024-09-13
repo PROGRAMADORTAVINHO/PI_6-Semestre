@@ -4,63 +4,50 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-body {
+.conterner_sensor {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #333;
-    font-family: Arial, sans-serif;
+    background-color: #F2F2F2;
     padding: 20px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    position: relative;
+    position: relative; /* Para lidar com os cards sobrepostos */
 }
 
 .card {
     width: 250px;
-    height: 200px;
-    background-color: transparent;
+    height: 225px; /* Altura inicial */
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, z-index 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: relative;
+    transition: all 0.5s ease;
     z-index: 1;
-}
-
-/* Erro linha 42 position: absolute*/
-
-.card:hover {
-    transform: scale(1.2); /* Aumenta o cartão visualmente */
-    z-index: 10; /* Faz o cartão vir à frente */
-    position: absolute; /* Fixa o cartão acima dos outros */
-    left: 0; /* Ajusta a posição */
-    right: 0; /* Mantém centralizado na grid */
 }
 
 .card-header {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    transition: height 0.5s ease;
 }
 
 .card-header img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
 
 .card-content {
-    background-color: rgb(114, 114, 114); /* Cor da descrição do sensor */
+    background-color: white;
     color: black;
     padding: 20px;
     position: absolute;
@@ -68,37 +55,30 @@ body {
     left: 0;
     right: 0;
     height: 0;
-    overflow: hidden;
     opacity: 0;
-    transition: opacity 0.5s ease, height 0.4s ease;
+    overflow: hidden;
+    transition: height 0.5s ease, opacity 0.5s ease;
+    z-index: 2;
 }
 
-.card-content h3{
+.card-content h3 {
+    font-size: larger;
     text-align: center;
 }
 
-.card-content p{
+.card-content p {
     text-align: justify;
-}
-
-.card:hover .card-content {
-    height: 50%;
-    opacity: 1;
-    position: relative;
+    margin: 10px 0;
 }
 
 .card:hover {
-    height: 450px;
-}
-
-.card:hover .card-header {
-    height: 50%;
+    z-index: 10; /* Garante que o card hover fica sobre os outros */
 }
 
 .card:hover .card-content {
-    height: 50%;
-    opacity: 1;
-    position: relative;
+    height: 100%; /* Expande o conteúdo sobre o card */
+    opacity: 1; /* Torna o conteúdo visível */
+    position: absolute;
 }
 
 /* Ao passar o mouse, os outros cards somem */
@@ -118,8 +98,7 @@ body {
     display: block;
     margin: 10px auto; /* Centraliza horizontalmente */
     padding: 8px 12px;
-    background-color: #333;
-    color: white;
+    color: #F24405;
     text-decoration: none;
     border-radius: 5px;
     text-align: center; /* Centraliza o texto no botão */
@@ -128,5 +107,6 @@ body {
 }
 
 .read-more:hover {
-    background-color: #555;
+    color: #fff;
+    background-color: #F24405;
 }
