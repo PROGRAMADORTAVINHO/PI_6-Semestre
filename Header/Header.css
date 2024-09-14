@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    /* FONT */
+    --font: 'Montserrat', sans-serif;
+
+    /* COLORS */
+    --color: #F24405;
+    --bg_color: #F2F2F2;
+}
+
+/* Estilos básicos de reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--bg_color);
+    font-family: var(--font);
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-list li {
+    display: inline-block;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--color);
+}
+
+.senac-logo {
+    width: 20px;
+    height: auto;
+}
+
+.nav-list img {
+    width: 20px;
+    height: auto;
+}
