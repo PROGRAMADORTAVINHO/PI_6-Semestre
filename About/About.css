@@ -20,7 +20,99 @@
     background-color: var(--bg_color);
 }
 
-/* ---------------- About Project ---------------- */
+/* ------------------- Gallery ------------------- */
+/* Estilos para a galeria de imagens */
+.gallery {
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+}
+
+/* Estilo da imagem ao passar o mouse */
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagem focada (quando o mouse está sobre ela) */
+.gallery img.hover {
+    transform: scale(1.05);
+}
+
+/* Opacidade reduzida das outras imagens */
+.gallery img.dimmed {
+    opacity: 0.3;
+}
+
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo da lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Estilo da imagem dentro da lightbox */
+.lightbox img {
+    width: 100vw;
+    /* Largura da imagem igual à largura da viewport */
+    height: 100vh;
+    /* Altura da imagem igual à altura da viewport */
+    object-fit: contain;
+    /* Garante que a imagem mantenha a proporção */
+}
+
+/* Estilos para os botões de navegação */
+.lightbox .prev,
+.lightbox .next {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    color: var(--color);
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    transform: translateY(-50%);
+    /* Alinha verticalmente os botões */
+}
+
+.lightbox .prev {
+    left: 10px;
+}
+
+.lightbox .next {
+    right: 10px;
+}
+
+/* Botão de fechar */
+.lightbox .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    color: var(--color);
+    cursor: pointer;
+}
+
+
+/* ----------------- About Project ---------------- */
 .container_project{
     display: flex;
     justify-content: center;
@@ -36,7 +128,7 @@
     margin: 0 100px 0 100px;
     width: 80%;
     height: 240px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .card_about_project{
@@ -85,7 +177,7 @@
     background-color: transparent;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     transition: height 0.5s ease, opacity 0.3s ease;
     position: relative;
     opacity: 1;

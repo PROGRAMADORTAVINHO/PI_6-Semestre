@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="galeria_foto.css">
+</head>
+
+<body>
+
+    <!-- Galeria de imagens -->
+    <div class="gallery">
+        <img src="Images_Teste/foto1.jpg" alt="Imagem 1" onclick="openImage(0)">
+        <img src="Images_Teste/foto2.jpg" alt="Imagem 2" onclick="openImage(1)">
+        <img src="Images_Teste/foto3.jpg" alt="Imagem 3" onclick="openImage(2)">
+        <img src="Images_Teste/foto4.jpg" alt="Imagem 3" onclick="openImage(3)">
+        <img src="Images_Teste/foto5.jpg" alt="Imagem 3" onclick="openImage(4)">
+        <img src="Images_Teste/foto1.jpg" alt="Imagem 1" onclick="openImage(5)">
+        <img src="Images_Teste/foto2.jpg" alt="Imagem 2" onclick="openImage(6)">
+        <img src="Images_Teste/foto3.jpg" alt="Imagem 3" onclick="openImage(7)">
+        <img src="Images_Teste/foto4.jpg" alt="Imagem 3" onclick="openImage(8)">
+        <img src="Images_Teste/foto5.jpg" alt="Imagem 3" onclick="openImage(9)">
+        <img src="Images_Teste/foto1.jpg" alt="Imagem 1" onclick="openImage(10)">
+        <img src="Images_Teste/foto2.jpg" alt="Imagem 2" onclick="openImage(11)">
+        <img src="Images_Teste/foto3.jpg" alt="Imagem 3" onclick="openImage(12)">
+        <img src="Images_Teste/foto4.jpg" alt="Imagem 3" onclick="openImage(13)">
+        <img src="Images_Teste/foto5.jpg" alt="Imagem 3" onclick="openImage(14)">
+        <img src="Images_Teste/foto1.jpg" alt="Imagem 1" onclick="openImage(15)">
+        <img src="Images_Teste/foto2.jpg" alt="Imagem 2" onclick="openImage(16)">
+        <img src="Images_Teste/foto3.jpg" alt="Imagem 3" onclick="openImage(17)">
+        <img src="Images_Teste/foto4.jpg" alt="Imagem 3" onclick="openImage(18)">
+        <img src="Images_Teste/foto5.jpg" alt="Imagem 3" onclick="openImage(19)">
+        <!-- Adicione mais imagens conforme necessário -->
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Imagem Grande">
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <script src="galeria_foto.js"></script>
+</body>
+
+</html>
