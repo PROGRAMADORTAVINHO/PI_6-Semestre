@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+/* ------------ VARIABLES ------------ */
+:root {
+    /* FONT */
+    --font: 'Montserrat', sans-serif;
+    --font_btn:'Poppins', sans-serif;
+
+    /* COLORS */
+    --color: #F24405;
+    --bg_color: #F2F2F2;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #F2F2F2;
+    font-family: var(--font);
+    background-color: var(--bg_color);
 }
 
 
-/* Hover Sensor */
+
+/* ---------------- Hover Sensor ---------------- */
 
 .conterner_sensor {
     display: flex;
@@ -100,7 +113,7 @@
     display: block;
     margin: 10px auto; /* Centraliza horizontalmente */
     padding: 8px 12px;
-    color: #F24405;
+    color: var(--color);
     text-decoration: none;
     border-radius: 5px;
     text-align: center; /* Centraliza o texto no botão */
@@ -109,6 +122,6 @@
 }
 
 .read-more:hover {
-    color: #fff;
-    background-color: #F24405;
+    color: var(--bg_color);
+    background-color: var(--color);
 }
