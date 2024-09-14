@@ -47,6 +47,7 @@
 }
 
 .project_title{
+    color: var(--color);
     background-color: var(--bg_color);
     font-size: larger;
     text-align: center;
@@ -119,6 +120,7 @@
 }
 
 .card-content h3{
+    color: var(--color);
     text-align: center;
 }
 
