@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+:root {
+    /* FONT */
+    --font: 'Montserrat', sans-serif;
+    --font_btn:'Poppins', sans-serif;
+
+    /* COLORS */
+    --color: #F24405;
+    --bg_color: #F2F2F2;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
 
-.conterner_sensor {
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #F2F2F2;
     padding: 20px;
 }
 
@@ -20,30 +28,32 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    position: relative; /* Para lidar com os cards sobrepostos */
 }
 
 .card {
     width: 250px;
-    height: 225px; /* Altura inicial */
+    height: 200px;
+    background-color: #333;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: height 0.5s ease, opacity 0.3s ease;
     position: relative;
-    transition: all 0.5s ease;
-    z-index: 1;
+    opacity: 1;
+    visibility: visible;
 }
 
 .card-header {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    transition: height 0.5s ease;
 }
 
 .card-header img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-content {
@@ -55,30 +65,36 @@
     left: 0;
     right: 0;
     height: 0;
-    opacity: 0;
     overflow: hidden;
-    transition: height 0.5s ease, opacity 0.5s ease;
-    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease, height 0.4s ease;
 }
 
-.card-content h3 {
-    font-size: larger;
+.card-content h3{
+    color: var(--color);
     text-align: center;
 }
 
-.card-content p {
+.card-content p{
     text-align: justify;
+}
+
+.card-content h3, .card-content p {
     margin: 10px 0;
 }
 
 .card:hover {
-    z-index: 10; /* Garante que o card hover fica sobre os outros */
+    height: 450px;
+}
+
+.card:hover .card-header {
+    height: 50%;
 }
 
 .card:hover .card-content {
-    height: 100%; /* Expande o conteúdo sobre o card */
-    opacity: 1; /* Torna o conteúdo visível */
-    position: absolute;
+    height: 50%;
+    opacity: 1;
+    position: relative;
 }
 
 /* Ao passar o mouse, os outros cards somem */
@@ -98,7 +114,7 @@
     display: block;
     margin: 10px auto; /* Centraliza horizontalmente */
     padding: 8px 12px;
-    color: #F24405;
+    color: var(--color);
     text-decoration: none;
     border-radius: 5px;
     text-align: center; /* Centraliza o texto no botão */
@@ -107,6 +123,6 @@
 }
 
 .read-more:hover {
-    color: #fff;
-    background-color: #F24405;
+    color: var(--bg_color);
+    background-color: var(--color);
 }
