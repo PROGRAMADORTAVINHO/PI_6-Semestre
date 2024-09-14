@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+/* ------------ VARIABLES ------------ */
+:root {
+    /* FONT */
+    --font: 'Montserrat', sans-serif;
+    --font_btn:'Poppins', sans-serif;
+
+    /* COLORS */
+    --color: #F24405;
+    --bg_color: #F2F2F2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    background-color: var(--bg_color);
+}
+
+.container_project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.card_description_about_project{
+    padding: 5px 25px 0px 25px;
+    border-radius: 20px;
+    margin: 0 100px 0 100px;
+    width: 80%;
+    height: 240px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card_about_project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project_title{
+    font-size: larger;
+    text-align: center;
+}
+
+.project_txt{
+    margin-top: 10px;
+    text-align: justify;
+}
