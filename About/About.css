@@ -30,6 +30,7 @@
 }
 
 .card_description_about_project{
+    background-color: var(--bg_color);
     padding: 5px 25px 0px 25px;
     border-radius: 20px;
     margin: 0 100px 0 100px;
@@ -39,17 +40,20 @@
 }
 
 .card_about_project{
+    background-color: var(--bg_color);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .project_title{
+    background-color: var(--bg_color);
     font-size: larger;
     text-align: center;
 }
 
 .project_txt{
+    background-color: var(--bg_color);
     margin-top: 10px;
     text-align: justify;
 }
