@@ -1,5 +1,6 @@
 /* ------------ GOOGLE FONTS ------------ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 /* ------------ VARIABLES ------------ */
 :root {
@@ -44,12 +45,11 @@
     height: 90%;
     background-color: #fff;
     border-radius: 2em;
-    box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
     padding: 2em 1em;
     display: flex;
     align-items: center;
     flex-direction: column;
-
     margin: 0 2em;
 }
 
@@ -78,35 +78,22 @@
     flex-direction: column;
 }
 
-.card__title {
+.card_slide_title {
     font-size: 1.5rem;
     font-weight: 500;
     position: relative;
     top: .2em;
 }
 
-.card__name {
+.card_slide_name {
     margin-top: 5px;
     color: var(--color);
 }
 
-.card__text {
+.card_slide_text {
     text-align: justify;
     font-size: 1.1rem;
     margin: 1em 0;
-}
-
-.card__btn {
-    background-color: var(--color);
-    color: #fff;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    border: none;
-    padding: .5em;
-    border-radius: .5em;
-    margin-top: .5em;
-    cursor: pointer;
 }
 
 ul {
@@ -125,7 +112,7 @@ ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     transition: 0.5s;
 }
 
@@ -147,7 +134,7 @@ ul li a {
 
 ul li:hover {
     width: 180px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 ul li::before {
