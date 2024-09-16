@@ -1,6 +1,5 @@
-/* ------------ GOOGLE FONTS ------------ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 /* ------------ VARIABLES ------------ */
 :root {
@@ -12,101 +11,114 @@
     --bg_color: #F2F2F2;
 }
 
-/* ------------ BASE ------------ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-.container_carrosel {
-    font-family: var(--font);
+.container_carousel {
+    min-height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: var(--bg-color);
+    background-color: var(--bg_color);
 }
 
-/* ----------- SLIDER ------------ */
-.swiper {
+.slide-container {
+    max-width: 1120px;
     width: 100%;
+    padding: 40px 0;
 }
 
-.swiper-wrapper {
-    width: 100%;
-    height: 35em;
-    display: flex;
-    align-items: center;
+.slide-content {
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
 }
 
-.card_slide {
-    width: 20em;
-    height: 90%;
+.card-carousel {
+    border-radius: 25px;
     background-color: #fff;
-    border-radius: 2em;
-    box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
-    padding: 2em 1em;
+}
+
+.image-content,
+.card-carousel-content {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    margin: 0 2em;
+    align-items: center;
+    padding: 10px 14px;
 }
 
-.swiper-slide:not(.swiper-slide-active) {
-    filter: blur(1px);
-}
-
-.card_slide_image {
+.card-carousel-image {
+    margin-top: 25px;
+    position: relative;
     width: 10em;
     height: 10em;
     padding: 3px;
-    margin-bottom: 2em;
     border-radius: 5px;
 }
 
-.card_slide_image img {
+.card-carousel-image img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
     object-fit: cover;
 }
 
-.card_slide_content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.name {
+    margin-top: 5px;
+    color: var(--color);
 }
 
-.card_slide_title {
+.profession {
     font-size: 1.5rem;
     font-weight: 500;
     position: relative;
     top: .2em;
 }
 
-.card_slide_name {
-    margin-top: 5px;
+.swiper-navBtn {
     color: var(--color);
+    transition: color 0.3s ease;
 }
 
-.card_slide_text {
-    text-align: justify;
-    font-size: 1.1rem;
-    margin: 1em 0;
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 35px;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: #fd916a;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--color);
 }
 
 ul {
+    margin-top: 25px;
     position: relative;
     display: flex;
     gap: 25px;
+    margin-bottom: 25px;
 }
 
 ul li {
     position: relative;
     list-style: none;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 60px;
     cursor: pointer;
     display: flex;

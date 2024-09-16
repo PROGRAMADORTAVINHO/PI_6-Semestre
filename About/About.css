@@ -26,7 +26,7 @@ body{
 }
 
 /* ---------------- Slide About us ---------------- */
-.container_carrosel {
+.container_carousel {
     min-height: 100vh;
     display: flex;
     align-items: center;
