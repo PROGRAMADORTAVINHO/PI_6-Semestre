@@ -18,10 +18,13 @@
 }
 
 .header {
+    position: fixed;
     width: 100%;
     background-color: var(--bg_color);
     font-family: var(--font);
     padding: 10px 0;
+    z-index: 100;
+    margin-top: -20px;
 }
 
 .navbar {
@@ -53,11 +56,12 @@
 }
 
 .senac-logo {
-    width: 20px;
+    width: 40px;
     height: auto;
+    border-radius: 5px;
 }
 
 .nav-list img {
-    width: 20px;
+    width: 40px;
     height: auto;
 }
