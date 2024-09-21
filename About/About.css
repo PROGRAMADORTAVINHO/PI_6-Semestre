@@ -25,6 +25,54 @@ body{
     background-color: var(--bg_color);
 }
 
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--bg_color);
+    font-family: var(--font);
+    padding: 10px 0;
+    z-index: 100;
+    margin-top: -20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-list li {
+    display: inline-block;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--color);
+}
+
+.senac-logo {
+    width: 40px;
+    height: auto;
+}
+
+.nav-list img {
+    width: 40px;
+    height: auto;
+}
+
 /* ---------------- Slide About us ---------------- */
 .title_teams{
     color: var(--color);
@@ -124,7 +172,7 @@ body{
     background-color: var(--color);
 }
 
-ul {
+.ul_slide {
     margin-top: 25px;
     position: relative;
     display: flex;
@@ -132,7 +180,7 @@ ul {
     margin-bottom: 25px;
 }
 
-ul li {
+.ul_slide .li_slide {
     position: relative;
     list-style: none;
     width: 50px;
@@ -147,7 +195,7 @@ ul li {
 }
 
 /* Adicionando estilos para o <a> */
-ul li a {
+.ul_slide .li_slide a {
     position: absolute;
     top: 0;
     left: 0;
@@ -162,12 +210,12 @@ ul li a {
     overflow: hidden;
 }
 
-ul li:hover {
+.ul_slide .li_slide:hover {
     width: 180px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-ul li::before {
+.ul_slide .li_slide::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -177,11 +225,11 @@ ul li::before {
     transition: 0.5s;
 }
 
-ul li:hover::before {
+.ul_slide .li_slide:hover::before {
     opacity: 1;
 }
 
-ul li::after {
+.ul_slide .li_slide::after {
     content: '';
     position: absolute;
     top: 10px;
@@ -195,28 +243,28 @@ ul li::after {
     filter: blur(15px);
 }
 
-ul li:hover::after {
+.ul_slide .li_slide:hover::after {
     opacity: 0.5;
 }
 
-ul li i {
+.ul_slide .li_slide i {
     color: #777;
     font-size: 1.75em !important;
     transition: 0.5s;
     transition-delay: 0.25s;
 }
 
-ul li:hover i {
+.ul_slide .li_slide:hover i {
     transform: scale(0);
     font-size: 1.75em;
     transition-delay: 0.25s;
 }
 
-ul li span {
+.ul_slide .li_slide span {
     position: absolute;
 }
 
-ul li .titulo {
+.ul_slide .li_slide .titulo {
     color: #fff;
     font-size: 1.1em !important;
     text-transform: uppercase;
@@ -226,7 +274,7 @@ ul li .titulo {
     transition-delay: 0s;
 }
 
-ul li:hover .titulo {
+.ul_slide .li_slide:hover .titulo {
     transform: scale(1);
     transition-delay: 0.25s;
 }
@@ -272,7 +320,6 @@ ul li:hover .titulo {
 .gallery img.dimmed {
     opacity: 0.3;
 }
-
 
 .gallery img:hover {
     transform: scale(1.05);
@@ -333,7 +380,6 @@ ul li:hover .titulo {
     cursor: pointer;
 }
 
-
 /* ----------------- About Project ---------------- */
 .container_project{
     display: flex;
@@ -345,24 +391,22 @@ ul li:hover .titulo {
 }
 
 .card_description_about_project{
-    background-color: var(--bg_color);
+    background-color: #fff;
     padding: 5px 25px 0px 25px;
     border-radius: 20px;
     margin: 0 100px 0 100px;
     width: 80%;
-    height: 250px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    height: 300px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .card_about_project{
-    background-color: var(--bg_color);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .project_title{
-    background-color: var(--bg_color);
     color: var(--color);
     align-items: center;
     justify-content: center;
@@ -371,8 +415,7 @@ ul li:hover .titulo {
 }
 
 .project_txt{
-    background-color: var(--bg_color);
-    margin-top: 10px;
+    margin: 20px 20px 10px 20px;
     text-align: justify;
 }
 

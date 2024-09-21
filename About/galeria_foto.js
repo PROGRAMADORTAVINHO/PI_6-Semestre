@@ -36,6 +36,7 @@ function openImage(index) {
     currentImageIndex = index;
     lightboxImg.src = images[currentImageIndex];
     lightbox.style.display = 'flex';
+    
 }
 
 // Fechar a lightbox
