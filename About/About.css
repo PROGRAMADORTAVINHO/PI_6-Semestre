@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-
 /* ------------ VARIABLES ------------ */
 :root {
     /* FONT */
@@ -26,13 +25,11 @@ body{
 }
 
 .header {
-    position: fixed;
     width: 100%;
     background-color: var(--bg_color);
     font-family: var(--font);
     padding: 10px 0;
     z-index: 100;
-    margin-top: -20px;
 }
 
 .navbar {
@@ -81,12 +78,11 @@ body{
     justify-content: center;
     display: flex;
     font-size: xx-large;
-    margin-top: 20px;
+    margin-top: 2%;
 }
 
 .container_carousel {
-    margin-top: -100px;
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -280,6 +276,44 @@ body{
     transition-delay: 0.25s;
 }
 
+/* ----------------- About Project ---------------- */
+.container_project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    padding: 2%;
+}
+
+.card_description_about_project{
+    background-color: #fff;
+    padding: 5px 25px 0px 25px;
+    border-radius: 20px;
+    margin: 0 100px 0 100px;
+    width: 80%;
+    height: 300px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card_about_project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project_title{
+    color: var(--color);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: xx-large;
+}
+
+.project_txt{
+    margin: 2% 2% 1% 2%;
+    text-align: justify;
+}
+
 /* ------------------- Gallery ------------------- */
 .title_gallery h3{
     color: var(--color);
@@ -287,16 +321,14 @@ body{
     justify-content: center;
     display: flex;
     font-size: xx-large;
-    margin-bottom: 10px;
-    margin-top: -150px;
+    margin-bottom: 2%;
 }
 
 /* Estilos para a galeria de imagens */
 .gallery {
-    margin-top: -100px;
     gap: 10px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 2%;
     display: grid;
     grid-template-columns: 200px 200px 200px 200px 200px;
 }
@@ -381,44 +413,6 @@ body{
     cursor: pointer;
 }
 
-/* ----------------- About Project ---------------- */
-.container_project{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-    margin-top: -250px;
-}
-
-.card_description_about_project{
-    background-color: #fff;
-    padding: 5px 25px 0px 25px;
-    border-radius: 20px;
-    margin: 0 100px 0 100px;
-    width: 80%;
-    height: 300px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.card_about_project{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.project_title{
-    color: var(--color);
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: xx-large;
-}
-
-.project_txt{
-    margin: 20px 20px 10px 20px;
-    text-align: justify;
-}
 
 /* ----------------- Hover Sensor ----------------- */
 
@@ -429,15 +423,14 @@ body{
     justify-content: center;
     display: flex;
     font-size: xx-large;
-    margin-top: 80px;
+    margin-top: 5%;
 }
 
 .conterner_sensor {
-    margin-top: -80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     padding: 20px;
 }
 
