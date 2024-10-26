@@ -29,7 +29,6 @@ body{
     background-color: var(--bg_color);
     font-family: var(--font);
     padding: 10px 0;
-    z-index: 100;
 }
 
 .navbar {

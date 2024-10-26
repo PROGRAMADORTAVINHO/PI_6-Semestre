@@ -32,32 +32,32 @@ fetch('http://localhost:3000/dados')
                     }
                 }
             }
-        });
-
-        const vibracao = new Chart(ctx, {
-            type: 'line', // Tipo de gráfico: barra, linha, etc.
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: 'Valores',
-                    data: valores,
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    title: {
-                        display: true,
-                        text: 'Chart.js Line Chart'
-                    }
-                }
-            }
-        });
+        }); 
+        // const ctv = document.getElementById('meuGrafico').getContext('2d');
+        // const vibracao = new Chart(ctv, {
+        //     type: 'line', // Tipo de gráfico: barra, linha, etc.
+        //     data: {
+        //         labels: labels,
+        //         datasets: [{
+        //             label: 'Valores',
+        //             data: valores,
+        //             backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        //             borderColor: 'rgba(75, 192, 192, 1)',
+        //             borderWidth: 1
+        //         }]
+        //     },
+        //     options: {
+        //         responsive: true,
+        //         plugins: {
+        //             legend: {
+        //                 position: 'top',
+        //             },
+        //             title: {
+        //                 display: true,
+        //                 text: 'Chart.js Line Chart'
+        //             }
+        //         }
+        //     }
+        // });
     })
     .catch(error => console.error('Erro ao buscar dados:', error));
